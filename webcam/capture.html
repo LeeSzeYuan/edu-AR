@@ -15,10 +15,15 @@
 
     <script>
         let video = document.querySelector("#videoElement");
+        const isMobile = navigator.userAgentData.mobile;
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUsermedia || navigator.mozGetUserMedia || navigator.mozGetUserMedia || navigator.oGetUserMedia;
 
         if (navigator.getUserMedia) {
-            navigator.getUserMedia({video: true}, handleVideo, videoError);
+            if (isMobile === true) {
+                navigator.getUserMedia({video: { facingMode: { exact: "environment" } } }, handleVideo, videoError);
+            } else {
+                navigator.getUserMedia({video: { facingMode: "user" } }, handleVideo, videoError);
+            }
         }
 
         function handleVideo(stream) {
