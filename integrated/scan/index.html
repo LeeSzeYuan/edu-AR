@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tfjs - Multiple object detection using pre trained model in TensorFlow.js</title>
+    <!-- Import the webpage's stylesheet -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <!-- Load the coco-ssd model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</head>
+<style>
+    body{
+        text-align: center;
+        /* padding-left: 20%; */
+        /* padding-right: 10%; */
+    }
+</style>
+<body>
+    <strong><h1 class="display-1">EduAR</h1></strong>
+
+    <div class="card">
+        <div class="card-body" id="loading">
+            <p class="note note-primary">
+                <strong>Loading...</strong> It may takes a while
+            </p>
+        </div>
+
+        <section id="demos" class="invisible">
+
+            <p class="card-text">Hold some objects up close to your webcam to get a real-time classification! (Now we only have flower, car, car and dog models)</p>
+            
+            <div id="liveView" class="camView">
+                <button id="webcamButton" class="btn btn-primary">Enable Webcam</button>
+                <video id="webcam" class="video-fluid" autoplay width="640" height="480"></video>
+                
+            </div>
+
+            <div id="captureB" style="display: none;">
+                <button id="capture" class="btn btn-secondary">Capture</button>
+            </div>
+            
+
+            <div id="resultB" style="display: none;">
+                <canvas id="canvas" width="640" height="480" class="video-fluid"></canvas>
+                <a id="result" class="btn btn-success"></a>
+            </div>
+
+            <div id="retakeB" style="display: none;">
+                <button id="retake" class="btn btn-warning">Take another one</button>
+            </div>
+            
+        </section>
+        
+        
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+
+</body>
+</html>
