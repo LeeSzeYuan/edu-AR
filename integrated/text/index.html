@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduAR - Scan</title>
+    <title>EduAR - Text</title>
     <!-- Import the webpage's stylesheet -->
     <!-- <link rel="stylesheet" href="style.css"> -->
 
@@ -46,35 +46,18 @@
     <div class="card">
         <div class="card-body" id="loading">
             <p class="note note-primary">
-                <strong>Loading...</strong> It may takes a while
+                <strong>Please enter what you want to search </strong>
             </p>
         </div>
 
-        <section id="demos" class="invisible">
+        
+        <div class="form-outline">
+            <input type="text" id="form1" class="form-control"/>
+        </div>
 
-            <p class="card-text">Hold some objects up close to your webcam to get a real-time classification! (Now we only have flower, car, car and dog models)</p>
-            
-            <div id="liveView" class="camView">
-                <button id="webcamButton" class="btn btn-primary">Enable Webcam</button>
-                <video id="webcam" class="video-fluid" autoplay width="640" height="480"></video>
-                
-            </div>
-
-            <div id="captureB" style="display: none;">
-                <button id="capture" class="btn btn-secondary">Capture</button>
-            </div>
-            
-
-            <div id="resultB" style="display: none;">
-                <canvas id="canvas" width="640" height="480" class="video-fluid"></canvas>
-                <a id="result" class="btn btn-success"></a>
-            </div>
-
-            <div id="retakeB" style="display: none;">
-                <button id="retake" class="btn btn-warning">Take another one</button>
-            </div>
-            
-        </section>
+        <div id="resultB">
+            <a id="result" class="btn btn-success">The Result Will Show Here</a>
+        </div>
         
         
     </div>

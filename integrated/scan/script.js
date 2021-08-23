@@ -132,7 +132,17 @@ function capture() {
     predictWebcam();
     console.log(result[0]['class']);
     resultText.innerHTML = "Result: " + result[0]['class'];
-    resultText.setAttribute("href", "../ar/")
+
+    if (result[0]['class'] ===  "dog"){
+      resultText.setAttribute("href", "../dog/")     
+    } else if (result[0]['class'] ===  "car"){
+      resultText.setAttribute("href", "../car/")
+    } else if (result[0]['class'] ===  "flower"){
+      resultText.setAttribute("href", "../flower/")
+    } else if (result[0]['class'] ===  "space"){
+      resultText.setAttribute("href", "../space/")
+    }
+    
 
     document.getElementById("captureB").style.display = "none";
     document.getElementById("resultB").style.display = "block";
